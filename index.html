@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+     <!-- Import Vega, Vega-lite and Vega-embed-->  
+     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega@5"></script>
+     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-lite@4.17.0"></script>
+     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-embed@6"></script>
+ 
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400,700" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">   
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="template.css">
+
+    <title>DS4200 Website Template</title>
+    <title>Centered Table</title>
+    <style>
+    table {
+      width: 80%;
+      border-collapse: collapse;
+      margin: 0 auto;
+      border: 3px solid #333;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    table, th, td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+    </style>
+</head>
+
+<body>
+ <!-- Customizing the navigation bar -->
+    <nav id="mainNavbar" class="navbar navbar-light navbar-expand-md py-0  fixed-top">
+
+ <!-- Adding the College name to the navigation bar -->
+        <a href="https://www.khoury.northeastern.edu" class="navbar-brand"><img src=logo.png style="width:180px;height:60px"/></a>
+
+ <!-- Adding navigation tab names to the navigation bar. This is done as an unordered list. Each list element is a navigation bar element. For each, I added an <a></a> tag which will be used to direct to the appropriate section on click. You can add new items incase you want to add a new section in your webpage by simply copy pasting one of the list items. Make sure to correctly link it to the section that it corresponds to.-->       
+        <div class="collapse navbar-collapse" id="navLinks">
+
+            <ul class="navbar-nav ">
+                <li class="nav-item">
+                    <a href="#Motivation" class="nav-link">Motivation</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#data" class="nav-link">Data</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#task" class="nav-link">Task Analysis</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#analysis" class="nav-link">Data Analysis </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#design" class="nav-link">Design Process</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#visualization" class="nav-link">Data Visualization(s)</a>
+                </li>
+               
+            </ul>
+        </div>
+    </nav>
+
+
+<!-- Section 1: Project title, group ID, group members names, and an optional project image goes here -->    
+    <section class="container-fluid px-0 py-0" style="margin-top:150px">
+        <div>
+                  <h1 style="text-align:center; font-weight: bold;">DS4200 Friendship Works 1</h1>
+                  <h3 style="text-align:center;">Stephen Magliocchino, Vivek Divakarla, Jingkai (Kenny) Wang</h2>
+                  <img style="display:block; margin-left:auto; margin-right:auto; width:50%" src="FW.png" alt="FriendshipWork Logo">
+                  <p style="text-align: center;">Image Name: FriendshipWork Logo</p>
+            </div>    
+    </section>
+    
+
+<!-- Section 2: Motivation -->    
+
+        <section id="Motivation" class="container-fluid px-0" style="margin-top:50px"></section>
+        <div>
+            <h2  style="text-align:center; font-weight: bold;"> Motivation </h2>
+            <p style="text-align: center; font-size:; margin-left:auto; margin-right:auto; width:50%; text-align: justify;">Our project involves the non-profit company FriendshipWorks, who work to match older adults to volunteers to make a lasting connection and lower rates of isolation. FriendshipWorks has multiple programs, but two they focus on are medical escort and friendly visiting. Medical Escort focuses on volunteers assisting older adults on their way to medical appointments, which can be a massive help as many adults don’t end up going to their doctor’s visits on their own. Their biggest program, Friendly Visiting, involves matching volunteers to older adults and spending time together approximately once a week. Building these connections are incredibly important for older adults, and some of the connections have lasted up to 40 years. Our purpose is to find the overlap between the elderly and the volunteers that work with Friendship Works. Finding overlaps in interests or backgrounds might lead to more compatibility between the two and higher satisfaction from taking part in Friendship Works.</p>
+        </div>    
+    </section>
+
+
+    <!-- Section 3: Data -->  
+    <section id="data" class="container-fluid px-0" style="margin-top:50px"></section>
+        <div>
+            <h2  style="text-align:center; font-weight: bold;"> Data </h2> 
+            <p style="text-align: center; font-size:; margin-left:auto; margin-right:auto; width:50%; text-align: justify;">As for the data that FriendshipWork provided, we use the data below to create the visualization. In addition to the data provided, we are using columns from census data as well.</p>
+
+            <table>
+              <tr>
+                <th>Mailing City/State</th>
+                <th>Type</th>
+              </tr>
+              <tr>
+                <td>Zip Code</td>
+                <td>Categorical</td>
+              </tr>
+              <tr>
+                <td>Program Participation</td>
+                <td>Categorical</td>
+              </tr>
+              <tr>
+                <td>1st Preferred Program</td>
+                <td>Categorical</td>
+              </tr>
+              <tr>
+                <td>Referral Agency</td>
+                <td>Categorical</td>
+              </tr>
+              <tr>
+                <td>Additional Referral Info</td>
+                <td>Categorical</td>
+              </tr>
+              <tr>
+                <td>Friendly Visit Tracking Name</td>
+                <td>Categorical (ID Numbers that do not seem to be ordered)</td>
+              </tr>
+              <tr>
+                <td>Length of Match (Months)</td>
+                <td>Quantitative</td>
+              </tr>
+              <tr>
+                <td>Neighborhood</td>
+                <td>Categorical</td>
+              </tr>
+              <tr>
+                <td>Population over 60</td>
+                <td>Quantitative</td>
+              </tr>
+              <tr>
+                <td>% of Population over 60</td>
+                <td>Quantitative</td>
+              </tr>
+            </table>
+
+        </div>
+    </section>
+
+    <!-- Section 4: Task Analysis -->  
+    <section id="task" class="container-fluid px-0" style="margin-top:50px"></section>
+        <div>
+            <h2  style="text-align:center; font-weight: bold;"> Task Analysis </h2>
+            <h4  style="text-align:center; font-weight: bold;">Keywords/Key Phrases List: </h4>
+            <p style="text-align: center; font-size:; margin-left:auto; margin-right:auto; width:50%; text-align: justify;">Neighborhoods of Greater Boston, Prove impact, Where do we have an imbalance, Funding, Volunteers, Identify hospital systems and health systems, Referrals, References, Isolation, Connections, Friendship and support.</p>
+
+            <h4  style="text-align:center; font-weight: bold;">The purpose of visualization: </h4>
+            <p style="text-align: center; font-size:; margin-left:auto; margin-right:auto; width:50%; text-align: justify;">The visualizations we are making are mainly for the organization members and volunteers to help them figure out what imbalances there are in their system. Based on the data they have, the organization wants to figure out if there are any major differences in the clusters between volunteers and older adults. We will be using zip code data to figure this out, and the type of consumption will be discovered and presented. After making these visualizations, the organization could use this to present in order to receive funding.</p>
+
+             <h4  style="text-align:center; font-weight: bold;">Task Table: </h4>
+             <table>
+              <tr>
+                <th>Index (ID#)</th>
+                <th>“Domain” Task</th>
+                <th>Analytic Task (Low-level, “Query”)</th>
+                <th>Search Task (Mid-level)</th>
+                <th>Analyze Task (High-level)</th>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>Measure and compare distances/travel times between volunteers and older adults</td>
+                <td>Retrieve Value/Characterize Distribution</td>
+                <td>Browse</td>
+                <td>Present</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>What are the results of the grant-funded projects</td>
+                <td>Filter</td>
+                <td>Explore</td>
+                <td>Present</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Find imbalances between number of volunteers and recipients in a given zip code</td>
+                <td>Retrieve Value/Characterize Distribution</td>
+                <td>Browse</td>
+                <td>Present</td>
+              </tr>
+            </table>
+
+        </div>
+    </section>
+
+
+    <!-- Section 5: Data Analysis -->  
+    <section id="analysis" class="container-fluid px-0" style="margin-top:50px"></section>
+        <div>
+            <h2  style="text-align:center; font-weight: bold;"> Data Analysis </h2> 
+            <p style="text-align: center; font-size:; margin-left:auto; margin-right:auto; width:50%; text-align: justify;">The data provided describes the geographic distribution of all volunteers and recipients that have partnered with FriendshipWorks. We have access to the zip code, their neighborhood, county, and state that they reside in. There is also another file containing the length in months that a partner and recipient have been matched for.</p>
+            <p style="text-align: center; font-size:; margin-left:auto; margin-right:auto; width:50%; text-align: justify;">When doing the original data cleaning, there were different obstacles we had to encounter, especially with the location data. The data was gathered through surveys, so in the responses there are many different answers that all mean the same thing, which made it confusing to organize. For example, when asked about the state of residence, some answers were given as Mass, Massachusetts and MA, which come up differently in a graph but all are the same state.</p>
+            <p style="text-align: center; font-size:; margin-left:auto; margin-right:auto; width:50%; text-align: justify;">The particular subsets we have chosen include zip code and program preference data for both volunteers and recipients. We chose these data points because we would be able to identify imbalances in the numbers of volunteers and recipients for each zip code, and show the organization where they would shift their focus.</p>
+        </div>
+    </section>
+
+
+    <!-- Section 6: Design Process -->  
+    <section id="design" class="container-fluid px-0" style="margin-top:50px"></section>
+        <div>
+            <h2  style="text-align:center; font-weight: bold;"> Design Process </h2> 
+            <p style="text-align: center; font-size:; margin-left:auto; margin-right:auto; width:50%; text-align: justify;">In the first stage, each member of our group drew three sketches that we thought might be helpful. Below are what sketches we have: </p>
+
+            <h5  style="text-align:center; font-weight: bold;"> Stephen </h5>
+            <img style="display:block; margin-left:auto; margin-right:auto; width:50%" src="Stephen1.png" alt="Stephen 1">
+            <p style="text-align: center; font-size:; margin-left:auto; margin-right:auto; width:60%; text-align: justify;">This visualization is useful because it demonstrates examples of travel time from volunteers to their recipients. It would display both their absolute distance and travel time (the x and y axes) and also group them into three separate ranges of “efficiency” based on expected travel times and lines of best fit. One potential hurdle I see with this visualization is finding consistent ways to collect travel time calculations because different volunteers would use different modes of transportation (car, bus, bike, walking, the T, etc.). The marks are points, and the channels are position along both scales and color of each point. This visualization would be used to try to find volunteers who were traveling more than 20 minutes because they find that 20 minutes is an upper bound for volunteers, and anyone who has to travel more than that typically doesn’t last very long in the program.</p>
+            <img style="display:block; margin-left:auto; margin-right:auto; width:50%" src="Stephen2.png" alt="Stephen 2">
+            <p style="text-align: center; font-size:; margin-left:auto; margin-right:auto; width:60%; text-align: justify;">This visualization is my favorite of the three I have created. It colors each postal code within Greater Boston using the scale seen on the right. Depending on the color of the area, that postal code would either have an imbalance of recipients or volunteers. This visualization is useful because it shows where/what type of person Friendship Works would have to recruit to fix these imbalances. We expect to see that there are more total people enlisted closer to Central Boston and for there to generally be more recipients than volunteers based on early exploration of the data. The mark is area, and the channels are color and position. This helps us accomplish the task of exploring imbalances between volunteers and recipients within the zip codes of Greater Boston.</p>
+            <img style="display:block; margin-left:auto; margin-right:auto; width:50%" src="Stephen3.png" alt="Stephen 3">
+            <p style="text-align: center; font-size:; margin-left:auto; margin-right:auto; width:60%; text-align: justify;">This visualization would be useful because it would illustrate the gender breakdown of recipients or volunteers. It would be a good way to quickly understand how the demographics of these two groups differ, and how future recruiting could be changed to balance these ratios out. For the “other” category, we could expand it into different subgroups based on the thoroughness of the data provided by Friendship Works, if possible. The mark is area and the channels are Color and Tilt. It doesn’t really address a task in the table, but we didn’t have information for us to assess the year-to-year growth or funding figures, so this was all I could think of.</p>
+
+            <h5  style="text-align:center; font-weight: bold;"> Jingkai (Kenny) Wang </h5>
+            <img style="display:block; margin-left:auto; margin-right:auto; width:50%" src="Jingkai1.png" alt="Jingkai 1">
+            <img style="display:block; margin-left:auto; margin-right:auto; width:50%" src="Jingkai2.png" alt="Jingkai 1">
+            <img style="display:block; margin-left:auto; margin-right:auto; width:50%" src="Jingkai3.png" alt="Jingkai 1">
+
+
+            <h5  style="text-align:center; font-weight: bold;"> Vivek </h5>
+            <img style="display:block; margin-left:auto; margin-right:auto; width:50%" src="Vivek1.png" alt="Vivek 1">
+            <p style="text-align: center; font-size:; margin-left:auto; margin-right:auto; width:60%; text-align: justify;">The first graph I chose was a map view of the Boston area, with the dots showing the difference between the Medical Escort program and Friendly Visiting. The mark for the graph is area, while the channel is position and color. This graph could show the imbalances between the two programs. </p>
+            <img style="display:block; margin-left:auto; margin-right:auto; width:50%" src="Vivek2.png" alt="Vivek 2">
+            <p style="text-align: center; font-size:; margin-left:auto; margin-right:auto; width:60%; text-align: justify;">The second graph is a bar chart showing different referral agencies for FriendshipWorks. The mark is a line, while the channels are position and size. The count of referrals could show which agencies have better connections with friendship works and which ones could be used more.</p>
+            <img style="display:block; margin-left:auto; margin-right:auto; width:50%" src="Vivek3.png" alt="Vivek 3">
+            <p style="text-align: center; font-size:; margin-left:auto; margin-right:auto; width:60%; text-align: justify;">The third graph is a binned bar chart showing the counts of ages. The mark is a line, while the channels are position and size. This graph can show which ages utilize the programs the most and where they could target their reach in the future. One part of the email they sent us regarded the age of the recipients and what insights they could gain from that data.</p>
+
+
+            <p style="margin-left:250px; font-weight: bold;">Then, as for the previous 9 sketches, our 3 favorite sketches are as follows:</p>
+            <ol style="text-align: center; font-weight: bold; margin-left:auto; margin-right:auto; width:60%; text-align: justify;">
+                <li>Kenny’s line graph showing funding over the years</li>
+                <li>Kenny’s scatter plot about distance vs. travel time</li>
+                <li>Steve’s map with the postal codes of Boston</li>
+              </ol>
+            <p style="text-align: center; font-size:; margin-left:auto; margin-right:auto; width:60%; text-align: justify;">We believe these are our 3 best sketches as they showcase the most about the data. The map with postal codes and a diverging gradient indicate where there are imbalances between recipients and volunteers, which is a main factor requested by FriendshipWorks. The line graph about funding is one that could be utilized well by FriendshipWorks when asking for different grants, as they are able to give a justification for their funding over the years. Finally, a scatter plot between distance and travel time is important for the matches. In our meeting with the organization, FriendshipWorks explained that matches have better success if there is a shorter travel time between the recipient and the volunteer.</p>
+            <p style="text-align: center; font-size:; margin-left:auto; margin-right:auto; width:60%; text-align: justify;">Overall, to help FriendshipWorks, we analyzed their data to uncover these trends and insights. We identified imbalances in volunteer to recipient ratios and identified areas with potential for growth. In addition, we explored the use of travel time as a measure of volunteer-recipient matching, which showed promise in creating more lasting matches. The next step in our project is to begin sketching designs for interactive web-based visualization. This will help present our findings in a way that is easy to understand and visually appealing. Our goal is to create a tool that will enable Friendship Place to make informed decisions about its programs and help them better serve older adults in the community. We look forward to continuing to work on this project and helping to make a positive impact through our data analysis and visualization efforts.</p>
+
+        </div>
+    </section>
+
+
+<!-- Section 7: Data Visualization(s) -->  
+    <section id="visualization" class="container-fluid px-0" style="margin-top:50px"></section>
+        <div>
+            <h2  style="text-align:center; font-weight: bold;"> Data Visualization(s) </h2> 
+        </div>    
+            
+         <!-- Add a header for the first vis--> 
+    <p style="font-size:20px; font-weight: bold; text-align: center;">First Visualization</p>
+    <p style="font-size:20px; font-weight:; text-align: center;">Our first visualization is one which compares volunteer/recipient data to each area. Each volunteer is matched with a zip code as provided in the survey data, and we attempted to manually map each neighborhood to a zip code, and plot the two together. This graph still is in progress as there is a lot more data but it's not yet connected with each neighborhood.</p>
+     
+    <!-- Div for first visualization with an ID vis1-->  
+        <div id="vis1" class="center"></div>
+    
+     <!-- Add a header for the second vis--> 
+        <p style="font-size:20px; font-weight: bold;text-align: center;">Second Visualization</p>
+        <p style="font-size:20px; font-weight:; text-align: center;">This visualization is interactive and links each neighborhood of Boston from a bar graph to a map. One goal FriendshipWorks had for us was to look at different census data and target where more older adults would be located, as that is their main users. We took data from the census for this visualization, as they had a column of population 60 and older. The visualization shows each neighborhood and the population over 60, and the map shows the same but color coded where dark blue has the highest population and the lighter green is the lowest population.</p>
+        
+    <!-- Div for second visualization with an ID vis2-->
+        <div id="vis2" class="center"></div>
+
+
+    <!--VegaEmbed function for chart 1/vis1 -->   
+    <script>
+        (function(vegaEmbed) {
+          var spec = {"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "hconcat": [{"layer": [{"data": {"url": "https://raw.githubusercontent.com/lsouth/DS4200/main/Boston_Neighborhoods.json", "format": {"feature": "Boston_Neighborhoods", "type": "topojson"}}, "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "white"}, "height": 500, "width": 500}, {"data": {"name": "data-16ffd969661b9b9d5b5a9522470b815a"}, "mark": "point", "encoding": {"latitude": {"field": "latitude", "type": "quantitative"}, "longitude": {"field": "longitude", "type": "quantitative"}, "opacity": {"condition": {"value": 1, "selection": "selector002"}, "value": 0.2}}, "selection": {"selector002": {"type": "multi", "fields": ["location"]}}}]}, {"data": {"name": "data-16ffd969661b9b9d5b5a9522470b815a"}, "mark": "bar", "encoding": {"opacity": {"condition": {"value": 1, "selection": "selector002"}, "value": 0.2}, "x": {"field": "location", "type": "nominal"}, "y": {"aggregate": "count", "type": "quantitative"}}, "selection": {"selector002": {"type": "multi", "fields": ["location"]}}}], "$schema": "https://vega.github.io/schema/vega-lite/v4.17.0.json", "datasets": {"data-16ffd969661b9b9d5b5a9522470b815a": [{"state": "Massachusetts", "location": "Boston", "address": "101 Summer St Boston, MA 02110 US", "latitude": 42.3534009669804, "longitude": -71.0580917615833}, {"state": "Massachusetts", "location": "Boston", "address": "148 Brookline Ave Boston, MA 02215 US", "latitude": 42.3446571, "longitude": -71.1008254}, {"state": "Massachusetts", "location": "Boston", "address": "283 Washington St Boston, MA 02108 US", "latitude": 42.3575493062503, "longitude": -71.0584290638063}, {"state": "Massachusetts", "location": "Boston", "address": "51 Boston Wharf Rd Boston, MA 02210 US", "latitude": 42.3510480274497, "longitude": -71.0457239226236}, {"state": "Massachusetts", "location": "Boston", "address": "553 Boylston St Boston, MA 02116 US", "latitude": 42.3506571, "longitude": -71.0761335999999}, {"state": "Massachusetts", "location": "Boston", "address": "8 Park Plz Boston, MA 02116 US", "latitude": 42.3517537785312, "longitude": -71.0669728884126}, {"state": "Massachusetts", "location": "Jamaica Plain", "address": null, "latitude": 42.3132, "longitude": -71.1141}, {"state": "Massachusetts", "location": "Dorchester", "address": null, "latitude": 42.2995, "longitude": -71.0649}]}};
+          var embedOpt = {"mode": "vega-lite"};
+    
+          function showError(el, error){
+              el.innerHTML = ('<div class="error" style="color:red;">'
+                              + '<p>JavaScript Error: ' + error.message + '</p>'
+                              + "<p>This usually means there's a typo in your chart specification. "
+                              + "See the javascript console for the full traceback.</p>"
+                              + '</div>');
+              throw error;
+          }
+          const el = document.getElementById('vis1');
+          vegaEmbed("#vis1", spec, embedOpt)
+            .catch(error => showError(el, error));
+        })(vegaEmbed);
+   
+
+    /* VegaEmbed function for chart 2/vis2 */
+
+        (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "hconcat": [{"data": {"url": "https://raw.githubusercontent.com/lsouth/DS4200/main/Boston_Neighborhoods.json", "format": {"feature": "Boston_Neighborhoods", "type": "topojson"}}, "mark": "geoshape", "encoding": {"color": {"field": "Count", "type": "quantitative"}, "opacity": {"condition": {"value": 1, "selection": "selector004"}, "value": 0.2}, "tooltip": {"field": "properties.Name", "type": "nominal"}}, "height": 300, "selection": {"selector004": {"type": "multi", "fields": ["Neighborhood"]}}, "transform": [{"lookup": "properties.Name", "from": {"data": {"name": "data-31a4a404b3c29de6e6286d24f7cfb160"}, "key": "Neighborhood", "fields": ["Neighborhood", "Count"]}}], "width": 300}, {"data": {"name": "data-31a4a404b3c29de6e6286d24f7cfb160"}, "mark": "bar", "encoding": {"opacity": {"condition": {"value": 1, "selection": "selector004"}, "value": 0.2}, "x": {"field": "Neighborhood", "sort": "-y", "type": "nominal"}, "y": {"field": "Count", "type": "quantitative"}}, "selection": {"selector004": {"type": "multi", "fields": ["Neighborhood"]}}}], "$schema": "https://vega.github.io/schema/vega-lite/v4.17.0.json", "datasets": {"data-31a4a404b3c29de6e6286d24f7cfb160": [{"Neighborhood": "Allston", "Count": 102}, {"Neighborhood": "Back Bay", "Count": 277}, {"Neighborhood": "Bay Village", "Count": 33}, {"Neighborhood": "Beacon Hill", "Count": 219}, {"Neighborhood": "Brighton", "Count": 338}, {"Neighborhood": "Charlestown", "Count": 369}, {"Neighborhood": "Chinatown", "Count": 7}, {"Neighborhood": "Dorchester", "Count": 964}, {"Neighborhood": "Downtown", "Count": 74}, {"Neighborhood": "East Boston", "Count": 601}, {"Neighborhood": "Fenway", "Count": 220}, {"Neighborhood": "Hyde Park", "Count": 316}, {"Neighborhood": "Jamaica Plain", "Count": 346}, {"Neighborhood": "Leather District", "Count": 3}, {"Neighborhood": "Longwood", "Count": 28}, {"Neighborhood": "Mattapan", "Count": 209}, {"Neighborhood": "Mission Hill", "Count": 121}, {"Neighborhood": "North End", "Count": 33}, {"Neighborhood": "Roslindale", "Count": 435}, {"Neighborhood": "Roxbury", "Count": 441}, {"Neighborhood": "South Boston", "Count": 428}, {"Neighborhood": "South Boston Waterfront", "Count": 21}, {"Neighborhood": "South End", "Count": 540}, {"Neighborhood": "West End", "Count": 71}, {"Neighborhood": "West Roxbury", "Count": 632}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div class="error" style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis2');
+      vegaEmbed("#vis2", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+</script>    
+    
+
+
+
+
+
+
+
+
+
+
+
+       
+    </section> 
+      
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <footer style="background-color:#000000d0; height:50px; margin-top:100px;">
+        <p style="font-size:1em; color:#ffffffe5; text-align:center; font-weight:bold; margin-top:0px;"> This work was supported in part by the Khoury College of Computer Sciences at Northeastern University.</p>
+    </footer>
+   
+    
+
+   
+  
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
+    <script>
+        $(function () {
+            $(document).scroll(function () {
+                var $nav = $("#mainNavbar");
+                $nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
+            });
+        });
+    </script>
+</body>
+
+</html>
