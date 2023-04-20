@@ -1,6 +1,6 @@
 # vivekdivakarla12.github.io
 
-# DS4400 Course Project
+# DS4200 Course Project
 
 Website Link - https://vivekdivakarla12.github.io/
 
